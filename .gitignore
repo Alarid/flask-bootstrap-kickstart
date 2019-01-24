@@ -1,0 +1,5 @@
+app/__pycache__/*
+__pycache__/*
+*.pot
+*.env
+*.pyc
