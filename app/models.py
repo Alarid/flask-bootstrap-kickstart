@@ -7,6 +7,7 @@ from time import time
 import jwt
 from app import app
 
+
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)

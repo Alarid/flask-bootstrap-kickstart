@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
 {% block app_content %}
-  <h1>Hi, {{ current_user.username }}!</h1>
-  <p>Kickstart Flask / Bootstrap / jQuery Homemade my bro !</p>
+  <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}!</h1>
+  <p>{{ _('Kickstart Flask / Bootstrap / jQuery Homemade my bro !') }}</p>
 {% endblock %}
