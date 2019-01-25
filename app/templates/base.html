@@ -4,6 +4,11 @@
   {% if title %}{{ title }} - Kickstart{% else %}Welcome to Kickstart{% endif %}
 {% endblock %}
 
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+{% endblock %}
+
 {% block navbar %}
   <nav class="navbar navbar-default">
     <div class="container">

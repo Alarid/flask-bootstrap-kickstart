@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 
 {% block app_content %}
-    <table>
-        <tr valign="top">
-            <td><img src="{{ user.avatar(128) }}"></td>
-            <td>
-                <h1>User: {{ user.username }}</h1>
-                {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
-                {% if user.last_seen %}<p>Last seen on: {{ user.last_seen }}</p>{% endif %}
+    <div class="row">
+        <div class="col-sm-3 col-md-2">
+            <img src="{{ user.avatar(128) }}">
+        </div>
+        <div class="col-sm-9 col-md-10">
+            <h1>User: {{ user.username }}</h1>
+            {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+            {% if user.last_seen %}
+            <p>Last seen on: {{ moment(user.last_seen).format('LLL') }}</p>
+            {% endif %}
 
-                {% if user == current_user %}
-                <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
-                {% endif %}
-            </td>
-        </tr>
-    </table>
+            {% if user == current_user %}
+            <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+            {% endif %}
+        </div>
+    </div>
     <hr>
 
     <p>Excellent Smithers.</p>
