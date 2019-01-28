@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os, click
 
 def register(app):

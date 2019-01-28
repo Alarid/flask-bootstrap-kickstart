@@ -1,4 +1,6 @@
-from flask import render_template, flash, redirect, url_for, request, g
+# -*- coding: utf-8 -*-
+
+from flask import render_template, flash, redirect, url_for, request, g, current_app
 from flask_login import current_user, login_user, login_required, logout_user
 from werkzeug.urls import url_parse
 from datetime import datetime
@@ -24,7 +26,8 @@ def before_request():
 @login_required
 def index():
     user = {'username': 'Yoh'}
-    return render_template('index.html', title=_('Home'))
+    app_name = current_app.config['APP_NAME']
+    return render_template('index.html', title=_('Home'), app_name=app_name)
 
 
 @bp.route('/user/<username>')

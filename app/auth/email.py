@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from flask import current_app
 from app.email import send_email
 from flask import render_template

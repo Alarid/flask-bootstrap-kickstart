@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from app import db, login
 from flask import current_app
 from datetime import datetime
