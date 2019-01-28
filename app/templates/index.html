@@ -3,5 +3,5 @@
 {% block app_content %}
   <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}!</h1>
   <p>{{ _('Kickstart Flask / Bootstrap / jQuery Homemade my bro !') }}</p>
-  <p>APP_NAME = {{ app_name }} </p>
+  <p>APP_NAME = {{ g.app_name }} </p>
 {% endblock %}

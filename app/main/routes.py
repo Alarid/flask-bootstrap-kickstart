@@ -19,6 +19,7 @@ def before_request():
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
     g.locale = str(get_locale())
+    g.app_name = current_app.config['APP_NAME']
 
 
 @bp.route('/')
@@ -26,8 +27,7 @@ def before_request():
 @login_required
 def index():
     user = {'username': 'Yoh'}
-    app_name = current_app.config['APP_NAME']
-    return render_template('index.html', title=_('Home'), app_name=app_name)
+    return render_template('index.html', title=_('Home'))
 
 
 @bp.route('/user/<username>')

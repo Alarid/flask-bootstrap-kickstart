@@ -1,6 +1,6 @@
 # Kickstart
 
-Clone this project to "kickstart" your web application development with Flask / Bootstrap
+Clone this project to "kickstart" your web application development with Flask / Bootstrap, on a responsive design base.
 
 
 ## Installation
@@ -24,11 +24,12 @@ To launch the application, simply use:
 ```sh
 flask run
 ```
+To edit the default application name, change the **APP_NAME** variable in the configuration file (*config.py*).
 
 
 ## Manage translations
 ```sh
 flask translate init LANG   # to add a new language
 flask translate update      # to update all language repositories
-flask translate compile     # to compile all language 
+flask translate compile     # to compile all language
 ```
