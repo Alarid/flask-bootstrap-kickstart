@@ -1,7 +1,34 @@
 # Kickstart
 
-**todo**
+Clone this project to "kickstart" your web application development with Flask / Bootstrap
 
-parler du kickstart.env (non versionné)
-requirements.txt
-...
+
+## Installation
+```sh
+git clone https://github.com/Alarid/flask-bootstrap-kickstart.git
+cd <directory>
+pip install -r requirements.txt
+flask db migrate
+```
+
+Create a file "<filename>.env" with the need env variables, for example:
+```sh
+SECRET_KEY=a-really-long-and-unique-key-that-nobody-knows
+MAIL_SERVER=localhost
+MAIL_PORT=8025
+```
+
+
+## Run the web application
+To launch the application, simply use:
+```sh
+flask run
+```
+
+
+## Manage translations
+```sh
+flask translate init LANG   # to add a new language
+flask translate update      # to update all language repositories
+flask translate compile     # to compile all language 
+```
