@@ -13,7 +13,7 @@
             {% endif %}
 
             {% if user == current_user %}
-            <p><a href="{{ url_for('edit_profile') }}">{{ _('Edit your profile') }}</a></p>
+            <p><a href="{{ url_for('main.edit_profile') }}">{{ _('Edit your profile') }}</a></p>
             {% endif %}
         </div>
     </div>
